@@ -1,0 +1,789 @@
+body,
+#slider,
+.wrap,
+.slide-content {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  background-attachment: fixed;
+  width: 100%;
+}
+
+.wrap {
+  position: relative;
+}
+
+.slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slide1{
+	background-image: url("img/cake1234.jpg");
+}
+.slide2{
+	background-image: url("img/cake1234.jpg");
+}
+
+.slide3{
+	background-image: url("img/cake1234.jpg");
+}
+
+
+
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.slide-content span {
+  font-size: 5rem;
+  color: #fff;
+}
+
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -35px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+#arrow-left {
+  border-width: 30px 40px 30px 0;
+  border-color: transparent #fff transparent transparent;
+  left: 0;
+  margin-left: 30px;
+}
+
+#arrow-right {
+  border-width: 30px 0 30px 40px;
+  border-color: transparent transparent transparent #fff;
+  right: 0;
+  margin-right: 30px;
+}
+
+.content {
+      width: 94%;
+      margin: 4em auto;
+      font-size: 20px;
+      line-height: 30px;
+      text-align: justify;
+}
+
+.logo {
+      line-height: 60px;
+      position: fixed;
+      float: left;
+      margin: 16px 46px;
+      color: #fff;
+}
+.logo img {
+      width: 30px;
+      padding: 0px 0px 7px 0px
+}
+nav {
+      z-index: 20;
+      position: fixed;
+      width: 100%;
+      line-height: 60px;
+}
+
+nav ul {
+      line-height: 60px;
+      list-style: none;
+      background: rgba(0, 0, 0, 0);
+      overflow: hidden;
+      color: #fff;
+      padding: 0;
+      text-align: right;
+      margin: 0;
+      padding-right: 40px;
+      transition: 1s;
+}
+
+nav.black ul {
+      background: #e84393;
+}
+
+nav ul li {
+      display: inline-block;
+      padding: 0px 40px;;
+}
+
+nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 16px;
+      margin: 10px;
+      padding: 10px 20px;
+}
+nav ul li a.active,nav ul li a:hover{
+      background-color: white;
+      color: #e84393;
+      transition: 0.5s;
+}
+.grid{
+      display: grid;
+      grid-template-columns: 1fr 400px 400px 1fr;
+      grid-template-rows: 0.91fr 650px .5fr 1fr 250px;
+      grid-template-areas: 
+      "header header header header"
+      "sidebar sidebar sidebar sidebar"
+      "info info info info"
+      "cake-slider cake-slider cake-slider cake-slider"
+      "footer footer footer footer";
+}
+.header{
+      grid-area: header;
+}
+
+
+.sidebar{
+      grid-area: sidebar;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas:
+      "quote quote quote"
+      "container1 container2 container3"
+      "container4 container5 container6"
+      "order order order"
+      ;
+      grid-template-rows: 80px;
+      justify-items:center;
+      align-items:center;
+      margin-left:0;
+      background-color: #e84393;
+      grid-gap: 20px;
+}
+h1{
+      background-color: white;
+      padding: 10px;
+      color: #e84393;
+      box-shadow: 10px black;
+}
+.quote{
+      grid-area: quote;
+}
+.container1{
+      grid-area: container1;
+}
+.container2{
+      grid-area: container2;
+}
+.container3{
+      grid-area: container3;
+}
+.container4{
+      grid-area: container4;
+}
+.container5{
+      grid-area: container5;
+}
+.container6{
+      grid-area: container6;
+}
+.order{
+  grid-area: order;
+}
+.sidebar img{
+       border-radius: 0px;
+}
+.container1:hover,.container2:hover,.container3:hover,.container4:hover,.container5:hover,.container6:hover{
+      transform: scale(1.01);
+      box-shadow: 5px grey;
+
+}
+figcaption{
+      text-align: center;
+      font-weight: 700;
+      font-size: 20px;
+      text-decoration: none;
+      background-color: white;
+      color: #e84393;
+}
+
+.info{
+      grid-area: info;
+      background-color: #e84393;
+      display: grid;
+      justify-content: center;
+}
+.info img {
+       max-width: 100%;
+       height: auto;
+}
+.cake-slider{
+  grid-area: cake-slider;
+  background-color: #e84393;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  background-color: #ecf0f1;
+}
+/*RESET*/
+
+
+/* https://meyerweb.com/eric/tools/css/reset/ 
+     v2.0 | 20110126
+     License: none (public domain)
+  */
+
+div,
+span,
+applet,
+object,
+iframe,
+.wrapper h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.wrapper p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+.wrapper figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+.wrapper figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/*GENERAL*/
+
+a {
+  text-decoration: none;
+}
+
+.wrapperAll {
+  width: 100%;
+  overflow: hidden;
+  font-size: .850em;
+  padding: 4em 0;
+  font-family: Verdana;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 900px;
+  margin: 2em auto;
+}
+
+.wrapper:after {
+  content: ' ';
+  display: block;
+  clear: both;
+}
+
+
+/*TITLE*/
+
+.wrapper h1 {
+  float: left;
+  font-size: 140%;
+  font-family: Arial;
+  color:#e84393;
+  background-color: white;
+  padding: 10px 10px;
+  font-weight: 700;
+}
+
+.buttonLine {
+  float: right;
+  color: #e84393;
+  padding: .5em 1.2em;
+  border: solid 1px #e84393;
+  border-radius: 20px;
+}
+
+.buttonLine:hover {
+  background: #e84393;
+  color: #f7f7f7;
+  transition: all ease-in-out .3s;
+}
+
+
+/*SLIDER - COMPLETE*/
+
+.sliderComplete {
+  position: relative;
+}
+
+
+/*Slider*/
+
+.slider {
+  width: 300%;
+  transition: all 500ms;
+  background-color: #cccccc;
+  padding: 20px 0px 0px 20px;
+}
+
+.slider li {
+  display: inline-block;
+  width: 200px;
+  margin: 0 1%;
+  padding-bottom: 2em;
+}
+
+.slider li:first-child {
+  margin-left: 0;
+}
+
+
+/*Content*/
+
+.slider li > * {
+  max-width: 100%;
+}
+
+
+/*Cover*/
+
+.slider li .cover {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-bottom: 1em;
+  height: 130px;
+  box-shadow: 5px 5px #2c3e50;
+}
+
+.slider li .cover img {
+  display: block;
+  width: 100%;
+}
+
+.slider li .cover:before {
+  display: block;
+  content: ' ';
+  background: rgba(247, 247, 247, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slider li .cover:hover:before {
+  background: rgba(247, 247, 247, .2);
+  transition: all 500ms;
+}
+
+
+/*Informations*/
+
+.slider li p {
+  line-height: 1.3;
+  color: #38373a;
+}
+
+.slider li p a {
+  color: #e84393;
+  font-size: 15px;
+}
+
+
+/*Buttons*/
+
+
+/*
+        The transition, added in CSS, will do the 'fadeIn' and the 'fadeOut' we can do in jQuery.
+        */
+
+.sliderComplete button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  padding: 1em 2em;
+  border: none;
+  background: #f0f0f0;
+  transition: all ease-in-out .5s;
+}
+
+.sliderComplete button[title="before"] {
+  left: 0;
+}
+
+.sliderComplete button[title="after"] {
+  right: 0;
+}
+
+.sliderComplete button.close {
+  opacity: 0;
+}
+
+.sliderComplete button.open {
+  opacity: .8;
+}
+
+
+/*Onclick*/
+
+
+/*The transition will allow the smooth animation of the slider.*/
+
+.turn {
+  margin-left: -75%;
+  transition: all .5s;
+}
+.footer{
+      grid-area: footer;
+      display: grid;
+      background-color:  #e84393;
+}
+.dummy_page {
+  height: 200px;
+  width: 100%;
+  background-color: #e84393;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 60px 0px;
+}
+/* STYLES SPECIFIC TO FOOTER  */
+.footer {
+  width: 100%;
+  position: relative;
+  height: auto;
+  background-color: #e84393;
+}
+.footer .col {
+  width: 190px;
+  height: auto;
+  float: left;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 0px 20px 20px 20px;
+}
+.footer .col h1 {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 17px;
+  padding: 10px 5px 5px 5px;
+  color: #e84393;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.250em;
+  background-color: white;
+  text-align: center;
+}
+.footer .col ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.footer .col ul li {
+  color: #bdc3c7;
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: bold;
+  padding: 5px 10px 5px 15px;
+  cursor: pointer;
+  transition: .2s;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+}
+.social ul li {
+  display: inline-block;
+  padding-right: 5px !important;
+}
+
+.footer .col ul li:hover {
+  color: #ffffff;
+  transition: .1s;
+  -webkit-transition: .1s;
+  -moz-transition: .1s;
+}
+.clearfix {
+  clear: both;
+}h2{
+      color: white;
+}
+/*.grid div:nth-child(even){
+      background-color: red;
+}
+.grid div:nth-child(odd){
+      background-color: green;
+}*/
+
+.menu-icon {
+      line-height: 60px;
+      width: 100%;
+      background: #e84393;
+      text-align: right;
+      box-sizing: border-box;
+      padding: 15px 24px;
+      cursor: pointer;
+      color: #fff;
+      display: none;
+}
+p{
+      color: white;
+      padding: 20px 300px;
+}
+
+
+@media(max-width: 786px) {
+
+      .logo {
+            position: fixed;
+            top: 0;
+            margin-top: 16px;
+      }
+
+      nav ul {
+            max-height: 0px;
+            background-color: #e84393;
+      }
+
+      nav.black ul {
+            background-color: #e84393;
+      }
+
+      .showing {
+            max-height: 34em;
+      }
+
+      nav ul li {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 24px;
+            text-align: center;
+      }
+      p{
+            padding: 0 30px;
+      }
+
+      .menu-icon {
+            display: block;
+      }
+      .grid{
+      display: grid;
+      grid-template-rows: 823px 1fr 1fr 1fr;
+      }
+      .sidebar{
+      grid-area: sidebar;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-items:center;
+      align-items:center;
+      margin-left:0;
+      grid-template-areas:
+      "quote quote"
+      "container1 container2" 
+      "container3 container4"
+      "container5 container6"
+      "para para";
+      grid-row-gap: 20px;
+      }
+      .info{
+        grid-template-columns: 1fr ;
+      }
+}
+@media only screen and (min-width: 1280px) {
+  .contain {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 1139px) {
+  .contain .social {
+    width: 1000px;
+    display: block;
+  }
+  .social h1 {
+    margin: 0px;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .footer .col {
+    width: 33%;
+  }
+  .footer .col h1 {
+    font-size: 14px;
+  }
+  .footer .col ul li {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 500px) {
+    .footer .col {
+      width: 50%;
+    }
+    .footer .col h1 {
+      font-size: 14px;
+    }
+    .footer .col ul li {
+      font-size: 13px;
+    }
+}
+@media only screen and (max-width: 340px) {
+  .footer .col {
+    width: 100%;
+  }
+}
+@media screen and (max-width:800px) {
+  /*
+  This prevents a potential overflow on the height and overflow allows the width for responsive. The scroll bar is not visible in any way on mobile.
+  */
+  .sliderComplete .wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  .slider {
+    width: 200%;
+  }
+  .slider li {
+    width: 14%;
+  }
+  .slider li .cover {
+    width: 100%;
+  }
+}
+
+@media screen and (orientation:portrait) {
+  .sliderComplete .wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  .slider {
+    width: 200%;
+  }
+  .slider li {
+    width: 14%;
+  }
+  .slider li .cover {
+    width: 100%;
+  }
+  .sliderComplete button,
+  .sliderComplete button.close,
+  .sliderComplete button.open {
+    display: none;
+    opacity: 0;
+  }
+}
